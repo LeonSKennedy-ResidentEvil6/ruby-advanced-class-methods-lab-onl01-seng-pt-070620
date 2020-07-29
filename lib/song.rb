@@ -112,7 +112,17 @@ class Song
 # initializes and saves a song and artist_name based on the filename format
 
   def self.create_from_filename(filename)
-    
+      artist_song_name = filename.chomp!(".mp3").split(" - ")
+      artist = artist_song_name[0]
+      song_name = artist_song_name[1]
+      
+      # make a new instance song
+      song = self.new
+      # set the properties on the song along with the value
+      song.name = song_name
+      song.artist_name = artist
+      # return the song to collect
+      song
   end 
 
 
