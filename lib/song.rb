@@ -118,6 +118,7 @@ class Song
       
       # make a new instance song
       song = self.create
+      song.save
       # set the properties on the song along with the value
       song.name = song_name
       song.artist_name = artist
