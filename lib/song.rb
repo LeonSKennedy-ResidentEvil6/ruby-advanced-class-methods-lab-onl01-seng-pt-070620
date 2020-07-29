@@ -111,8 +111,8 @@ class Song
 
 # initializes and saves a song and artist_name based on the filename format
 
-  def self.create_from_filename(artist_song_name)
-    
+  def self.create_from_filename(filename)
+    self.new_from_filename(filename)
   end 
 
 
